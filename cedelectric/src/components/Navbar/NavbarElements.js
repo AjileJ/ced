@@ -40,13 +40,24 @@ export const NavLogo = styled(LinkR)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: inset 0 0 0 0 gold;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    letter-spacing: 2px;
+    font-family: Arial Narrow, sans-serif;
 
     &:hover {
-        box-shadow: inset 100px 0 0 0 gold;
-        color: black;
+        // text-shadow: 0 0 5px #ff0000;
+        // font-size: 1.6rem;
+        animation: neon2 0.9s ease-in-out infinite alternate;
     }
+    @keyframes neon2 {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+            0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+        }
+        to {
+          text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+            0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+        }
+      }
 `;
 
 export const MobileIcon = styled.div`
@@ -93,3 +104,28 @@ export const NavLinks = styled(LinkS)`
         border-bottom: 3px solid gold;
     }
 `;
+
+export const NavBtn = styled.nav`
+    display: flex;
+    align-items: center;
+`;
+
+export const NavBtnLink = styled(LinkR)`
+    border-radius: 50px;
+    background: #01bf71;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: 010606;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: a;; 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #fff;
+        color: #010606;
+    }
+`
