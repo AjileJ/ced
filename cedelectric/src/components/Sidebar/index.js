@@ -15,7 +15,7 @@ const Sidebar = ({isOpen, toggle}) => {
           <SidebarLink to="gallery" onClick={toggle}>Gallery</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-            <SidebarRoute to="/" onClick={toggle}>Home</SidebarRoute>
+            <SidebarLink to="/" onClick={toggle}>Home</SidebarLink>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
